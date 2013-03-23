@@ -39,8 +39,8 @@ public class stars {
 	 */
 	public static void main(String[] args) {
 
-		String pathRoot = "C:\\Users\\RasPat\\workspaceClassic\\GCodeJam\\";
-		String relPath = "B-small-practice.in";
+		String pathRoot = "C:\\Users\\RasPat\\workspaceClassic\\GCodeJam\\2012_1A_PartB\\io\\";
+		String relPath = "B-large-practice.in";
 
 		// Length of the file extension
 		int extLength = 2;
