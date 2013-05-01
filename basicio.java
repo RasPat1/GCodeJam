@@ -2,6 +2,7 @@
  * 
  * @author RasPat
  *This is a skeleton for basic read write operations
+ *Make this template threaded
  */
 
 import java.io.BufferedReader;
@@ -10,14 +11,14 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 
-public class stars {
+public class basicio {
 
 	/**
 	 * @param args
 	 */
 	public static void main(String[] args) {
 
-		String pathRoot = "C:\\Users\\RasPat\\workspaceClassic\\GCodeJam\\";
+		String pathRoot = "C:\\Users\\RasPat\\workspace\\GCodeJam\\";
 		String relRoot = "B-large-practice.in";
 		String in = pathRoot + relRoot;
 		//Length of the file extension
@@ -33,7 +34,6 @@ public class stars {
 			String line;
 			while((line = r.readLine()) != null) {
 				//Enter read/write code here
-				
 			}
 		}
 		catch (IOException e){
