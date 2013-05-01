@@ -3,10 +3,10 @@ https://code.google.com/codejam/
 
 List of problems
 2008_1A
-    A - Milkshakes
-    B - MinScalarProduct
+    A - MinScalarProduct
+    *B - Milkshakes
 2009_QR
-    A - Googlerese
+    A - Alien
 2010_1A
     A- Rotate
 2010_1B
@@ -18,8 +18,11 @@ List of problems
     B - Reverse Words
     C - T9 Spelling
 2012_1A
+    A - Password
     B - Kingdom Rush
     *C - Cruise Control
+2012_1B
+    *A - Safety in Numbers
 2012_QR
     A - Speaking in Tongues
     B - Dancing with the Googlers
@@ -28,5 +31,6 @@ List of problems
     B - Lawnmower
     C - Fair and Square
         *Input: Large2
+    *D - Treasure
     
 * - unfinished

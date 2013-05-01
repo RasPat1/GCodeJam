@@ -1,5 +1,8 @@
 package gCodeJam13;
-
+/**
+ * Code as is from participation in 2013 Qualification round.
+ *  https://code.google.com/codejam/contest/2270488/dashboard#s=p1
+ */
 import java.math.*;
 import java.util.Arrays;
 import java.io.BufferedReader;

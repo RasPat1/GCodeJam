@@ -1,6 +1,8 @@
 package gCodeJam13;
 /**
- * 
+ * @author RasPat
+ * Problem:
+ * https://code.google.com/codejam/contest/2270488/dashboard#s=p3
  */
 import java.math.*;
 import java.util.Arrays;

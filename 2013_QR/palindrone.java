@@ -1,7 +1,7 @@
 package gCodeJam13;
 /**
- * Credit to Faruk Akgul.  Used his version of sqrt for the BigInteger class.
- * That's legal right?  his code's too good.  Feels like cheating.  Will try it another way.
+ * 
+ * https://code.google.com/codejam/contest/2270488/dashboard#s=p2
  */
 import java.math.*;
 import java.util.Arrays;

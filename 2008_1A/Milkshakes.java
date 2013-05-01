@@ -1,9 +1,12 @@
-package googleCodeJam;
+
 
 /**
+ * @author RasPat
+ * Problem can be found here:
  * https://code.google.com/codejam/contest/32016/dashboard#s=p1
+ * incomplete.
  */
-import java.math.*;
+
 import java.util.Arrays;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -52,7 +55,7 @@ public class Milkshakes {
 				printArray(cusPref);
 				
 				if(caseCount == 2) {
-					return;
+
 				}
 				
 				//First defaultto making all unmalted milkshakes

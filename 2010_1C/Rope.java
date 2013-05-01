@@ -1,8 +1,9 @@
-package googleCodeJam;
 /**
  * 
  * @author RasPat
- *This is a skeleton for basic read write operations
+ *Problem can be found here:
+ *https://code.google.com/codejam/contest/619102/dashboard#s=p0
+ *
  */
 
 import java.io.BufferedReader;

@@ -4,6 +4,9 @@
  *Problem can be found here:
  *https://code.google.com/codejam/contest/544101/dashboard#s=p0
  *Simple Solution: Push everything to the right and check for winners
+ *
+ *Same as Rotate except use for loops with boundaries to extract diagonals
+ *rather than while loops
  */
 
 import java.io.BufferedReader;
@@ -14,7 +17,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.ListIterator;
 
-public class Rotate {
+public class RotateAlternate {
 
 	public static void main(String[] args) {
 		
@@ -61,11 +64,6 @@ public class Rotate {
 				
 				//rotate(board);
 				//push everything to the right
-				
-				//pick the last dot on the row
-				//Replace it with the closest letter left of it
-				//change that letter's spot to a dot
-				//find the new last dot
 				for(int i =0; i < boardSize; i++) {
 					for(int j = boardSize - 1; j >= 0; j--) {
 						if(board[i][j] != '.') {
@@ -100,28 +98,47 @@ public class Rotate {
 						String matchD1 = "";
 						String matchD2 = "";
 						
-						//This way no fussing around with the boundary conditions just make sure to check
-						//if the returned string are long enough to keep the size of the arrayList down
-						int x1, x2, y1, y2;
-						x1 = x2 = i;
-						y1 = y2 = j;
-						//while still on board
-						while(x1 >= 0 && x1 < board.length && y1 >= 0 && y1 < board.length) {
-							matchD1 += board[x1][y1];
-							x1++;
-							y1++;
-						}					
-						while(x2 >= 0 && x2 < board.length && y2 >= 0 && y2 < board.length) {
-							matchD2 += board[x2][y2];
-							x2--;
-							y2++;
-						}
-						if(matchD1.length() >= winLen) {
+						//D1 and D2 constraints made so indexes don't go off the board
+						//could make the 2 'l' loops into one but it seems clearer 
+						//this way and winLen is typically small
+						
+						//Diagonal 1
+						if (i <= board.length - winLen	&& j <= board.length - winLen) {
+							for (int l = 0; l < winLen; l++) {
+								matchD1 += board[i + l][j + l];
+							}
 							matches.add(matchD1);
 						}
-						if(matchD2.length() >= winLen) {
+						//Diagonal 2
+						if(i >= winLen - 1 && j <= board.length - winLen) {
+							for(int l = 0; l < winLen; l++) {
+								matchD2 += board[i-l][j+l];
+							}
 							matches.add(matchD2);
 						}
+						
+//						//This way no fussing around with the boundary conditions just make sure to check
+//						//if the returned string are long enough
+//						int x1, x2, y1, y2;
+//						x1 = x2 = i;
+//						y1 = y2 = j;
+//						//while still on board
+//						while(x1 >= 0 && x1 < board.length && y1 >= 0 && y1 < board.length) {
+//							matchD1 += board[x1][y1];
+//							x1++;
+//							y1++;
+//						}					
+//						while(x2 >= 0 && x2 < board.length && y2 >= 0 && y2 < board.length) {
+//							matchD2 += board[x2][y2];
+//							x2--;
+//							y2++;
+//						}
+//						if(matchD1.length() >= winLen) {
+//							matches.add(matchD1);
+//						}
+//						if(matchD2.length() >= winLen) {
+//							matches.add(matchD2);
+//						}
 					}
 
 					matches.add(matchC);
@@ -132,6 +149,8 @@ public class Rotate {
 				ListIterator<String> it = matches.listIterator();
 				while(it.hasNext()) {
 					String s = (String) it.next();
+
+
 					if(s.contains(rWinString)) {
 						rWin = true;
 					}

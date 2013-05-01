@@ -1,10 +1,11 @@
-package googleCodeJam;
+
 
 /**
- * https://code.google.com/codejam/contest/351101/dashboard#s=p0
+ * @author RasPat
+ * The problem can be found here:
+ * https://code.google.com/codejam/contest/351101/dashboard#s=p1
  */
-import java.math.*;
-import java.util.Arrays;
+
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.FileReader;
@@ -14,7 +15,7 @@ import java.io.IOException;
 public class Numpad {
 
 	public static void main(String[] args) {
-		String pathRoot = "C:\\Users\\RasPat\\workspace\\Exercises\\Exercises\\googleCodeJam\\QRAfrica2010\\";
+		String pathRoot = "C:\\Users\\RasPat\\workspace\\googleCodeJam\\2010_QRAfrica\\";
 		String relRoot = "C-large-practice.in";
 		// String relRoot = "D-practice.in";
 		String in = pathRoot + relRoot;

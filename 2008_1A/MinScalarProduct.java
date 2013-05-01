@@ -1,9 +1,11 @@
-package googleCodeJam;
 
 /**
+ * @author RasPat
+ * Problem can be found here:
  * https://code.google.com/codejam/contest/32016/dashboard#s=p0
+ * Solution: multiply the largest from one vector with the smallest from the other
  */
-import java.math.*;
+
 import java.util.Arrays;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;

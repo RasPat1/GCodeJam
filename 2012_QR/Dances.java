@@ -1,7 +1,9 @@
-package googleCodeJam;
+/**
+ * @author RasPat
+ * Problem can be found here:
+ * https://code.google.com/codejam/contest/1460488/dashboard#s=p1
+ */
 
-import java.math.*;
-import java.util.Arrays;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.FileReader;
@@ -12,7 +14,7 @@ public class Dances {
 
 	public static void main(String[] args) {
 
-		String pathRoot = "C:\\Users\\RasPat\\workspace\\Exercises\\Exercises\\googleCodeJam\\";
+		String pathRoot = "C:\\Users\\RasPat\\workspace\\GCodeJam\\2012_QR\\";
 		String relRoot = "B-small-practice.in";
 		String in = pathRoot + relRoot;
 		// Length of the file extension
