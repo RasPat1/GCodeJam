@@ -1,6 +1,0 @@
-This is a solution to Google Code Jam 2012 Round 1A Part B.
-
-The full problem is here:
-https://code.google.com/codejam/contest/1645485/dashboard#s=p1
-
-The Part I like: To find the optimal move we first search the second column of the array forwards and then the first column backwards.  
