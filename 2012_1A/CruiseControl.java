@@ -1,9 +1,9 @@
 /**
- * 
+ *
  * @author RasPat
  *Problem can be found here:
  * https://code.google.com/codejam/contest/1645485/dashboard#s=p2
- * Simple Solution: 
+ * Simple Solution:
  */
 
 import java.io.BufferedReader;
@@ -16,14 +16,13 @@ public class CruiseControl {
 
 	public static void main(String[] args) {
 
-		String pathRoot = "C:\\Users\\RasPat\\workspace\\GCodeJam\\2012_1A\\";
-		;
+		String pathRoot = "./";
 		String relRoot = "C-small-practice.in";
 		String in = pathRoot + relRoot;
 		// Length of the file extension
 		int extLength = 2;
 		String out = in.substring(0, in.length() - extLength) + "2out";
-
+    in = "./ProblemC/C-small-practice.in";
 		BufferedReader r = null;
 		BufferedWriter w = null;
 		try {
@@ -33,26 +32,25 @@ public class CruiseControl {
 			// First line of Input is the # of test cases
 			int testCases = Integer.parseInt(r.readLine());
 			int caseCount = 0;
-
 			while (caseCount < testCases) {
 				caseCount++;
 				int carCount = Integer.parseInt(r.readLine());
-				line = r.readLine().split(" ");
 				//char
 				Car[] road = new Car[carCount];
 				for(int i = 0; i < road.length; i++) {
-					road[i] = new Car(line[0].charAt(0), 
+          line = r.readLine().split(" ");
+					road[i] = new Car(line[0].charAt(0),
 							Double.parseDouble(line[1]), Double.parseDouble(line[2]));
 				}
-				
+
 				//have a road full of Cars
-				
-				
-				
-				
-				
+
+
+
+
+
 				double result = 0.0d;
-				
+
 				w.write("Case #" + caseCount + ": "
 						+ String.format("%.6f", result));
 				w.newLine();
@@ -77,7 +75,7 @@ public class CruiseControl {
 //		char lane;
 //		double speed;
 //		double pos;
-//		
+//
 //		public Car(char lane, double speed, double pos) {
 //			this.lane = lane;
 //			this.speed = speed;
@@ -88,7 +86,7 @@ public class CruiseControl {
 //				lane = 'L';
 //			} else lane = 'R';
 //		}
-//		
+//
 //	}
 }
 

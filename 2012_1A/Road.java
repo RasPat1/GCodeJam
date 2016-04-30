@@ -4,7 +4,7 @@ public class Road {
 	Car[] r;
 	int roadIndex=0;
 	double minCrashTime;
-	
+
 	public Road(int numberOfCars) {
 		r = new Car[numberOfCars];
 	}
@@ -25,22 +25,21 @@ public class Road {
 		}
 	});
 }
-	
+
 
 	//checks if any two cars are collided
 	public boolean isValid() {
 		for(int i = 0; i < r.length -1; i++) {
 			for(int j=i+1; j< r.length; j++) {
 				if(Math.abs(r[i].pos - r[j].pos) < Car.LENGTH
-						&& r[i].lane == r[j].lane 
-						&& r[i].speed != r[j].speed) {
+						&& r[i].lane == r[j].lane ) {
 						return false;
 					}
 				}
 			}
 		return true;
 	}
-	
+
 	public boolean canChange(Car c) {
 		for(Car i : r) {
 			if(i == c) continue;
@@ -48,12 +47,12 @@ public class Road {
 		}
 		return true;
 	}
-	
+
 	public boolean willCollide(Car a, Car b) {
 		if(a.lane==b.lane && a.speed > b.speed) return true;
 		return false;
 	}
-	
+
 	public double whenCollide(Car a, Car b) {
 		double time = 0;
 //getting closer >0 , farther < 0 , touching = 0, stationary to each other = -1
@@ -62,7 +61,7 @@ public class Road {
 //returning zero means touching with relative speed.  Highest priority imminent collision.
 		return (time>=0)?time:-2;
 	}
-	
+
 	public void changeLane() {
 		double minCrashTime = 1000002;
 		for(int i = 0; i < r.length; i++){
@@ -73,17 +72,18 @@ public class Road {
 				if(time>=0) {
 					if(r[i].lane == r[j].lane) {
 						curLaneTime = (time<curLaneTime)?time:curLaneTime;
-					} else
-						otherLaneTime = (time<otherLaneTime)?time:otherLaneTime;
-					minCrashTime = (time<minCrashTime)?time:minCrashTime;
-				}	
+					} else {
+            otherLaneTime = (time<otherLaneTime)?time:otherLaneTime;
+          }
+          minCrashTime = (time<minCrashTime)?time:minCrashTime;
+				}
 			}
 			if(otherLaneTime > curLaneTime  && canChange(r[i])) r[i].changeLane();
 		}
 //		sortByPos();
 	}
-	
-	
+
+
 	public boolean isStable() {
 		for(int i =0; i < r.length-1; i++) {
 			for(int j=i + 1; j < r.length; j++) {
@@ -92,8 +92,8 @@ public class Road {
 		}
 		return true;
 	}
-	
-	
+
+
 	public void move(double time) {
 //		double time = timeStep*stepNumber;
 //		time = (int) (time*10000);
@@ -106,7 +106,7 @@ public class Road {
 		}
 		sortByPos();
 	}
-	
+
 	public void print() {
 		for(Car c: r) {
 			System.out.println(c.lane+" "+c.speed+" "+String.format("%.2f", c.pos));
